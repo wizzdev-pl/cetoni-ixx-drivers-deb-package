@@ -2,13 +2,13 @@
 
 set -x
 
+CETONI_DRIVER_NAME=ixx_driver
+CETONI_DRIVER_VERSION=1.1.148.0
+
 # Install Cetoni driver
 case "$1" in
     configure)
-        pushd /usr/src/ixx_driver-1.1.148.0
-	make all
-	make install
-	popd
+        dkms install -m $CETONI_DRIVER_NAME -v $CETONI_DRIVER_VERSION
     ;;
 
 
