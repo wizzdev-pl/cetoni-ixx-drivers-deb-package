@@ -1,0 +1,22 @@
+#!/bin/bash
+
+set -x
+
+# Install Cetoni driver
+case "$1" in
+    configure)
+        pushd /usr/src/ixx_driver-1.1.148.0
+	make all
+	make install
+	popd
+    ;;
+
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
