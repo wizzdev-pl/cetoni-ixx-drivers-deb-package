@@ -5,6 +5,6 @@
 
 
 # For FedoraCore 5 and similar:
-SUBSYSTEM=="usb_device", SYSFS{idVendor}=="08d8", ATTRS{idProduct}=="0009", RUN+="/sbin/ip link set can0 type can bitrate 1000000; /sbin/ip link set can0 up"
+SUBSYSTEM=="usb_device", SYSFS{idVendor}=="08d8", ATTRS{idProduct}=="0009", RUN+="/bin/sh -c 'ip link set can0 type can bitrate 1000000; /sbin/ip link set can0 up'"
 # For FedoraCore 7 and similar:
-SUBSYSTEM=="usb", ATTRS{idVendor}=="08d8", ATTRS{idProduct}=="0009", RUN+="/sbin/ip link set can0 type can bitrate 1000000; /sbin/ip link set can0 up"
+SUBSYSTEM=="usb", ATTRS{idVendor}=="08d8", ATTRS{idProduct}=="0009", RUN+="/bin/sh -c 'ip link set can0 type can bitrate 1000000; /sbin/ip link set can0 up'"
