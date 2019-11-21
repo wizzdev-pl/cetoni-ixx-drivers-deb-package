@@ -26,7 +26,8 @@ All steps needed to produce a package are written in `build/build_package.sh` sc
 
 Run `cmake` in desired build directory and provide a path to the top directory of this repository (where CMakeLists.txt is located).
 
-		mkdir build
+
+        mkdir build
         cd build
         cmake <path_to_top_folder_of_this_repository>
         make package
